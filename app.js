@@ -1,3 +1,5 @@
+// Code credit: https://discourse.threejs.org/t/how-do-i-render-a-video-on-sphere-in-threejs/34003/4
+
 import * as THREE from "https://cdn.skypack.dev/three@0.136.0";
 import {
   OrbitControls
