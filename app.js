@@ -20,12 +20,13 @@ document.body.appendChild(renderer.domElement);
 let controls = new OrbitControls(camera, renderer.domElement);
 
 btnPlay.addEventListener("click", event => {
-	btnPlay.style.display = "none";
   let video = document.getElementById('video');
   video.play();
-  let videoTex = new THREE.VideoTexture(video);
-  m.map = videoTex;
-  m.needsUpdate = true;
+})
+
+btnPause.addEventListener("click", event => {
+  let video = document.getElementById('video');
+  video.pause();
 })
 
 let g = new THREE.SphereGeometry(5, 128, 64);
@@ -49,3 +50,10 @@ function onWindowResize() {
 
   renderer.setSize(innerWidth, innerHeight);
 }
+
+let video = document.getElementById('video');
+video.play();
+
+let videoTex = new THREE.VideoTexture(video);
+m.map = videoTex;
+m.needsUpdate = true;
